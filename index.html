@@ -2,11 +2,135 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: {{projectTitle}}</title>
+    <title>Каталог</title>
+    <link rel="stylesheet" href="styles/styles.css">    
   </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
+  <body>
+   
+    <div class="container">
+      <header class="main-header">
+        <nav class="navigation">
+          <img class="main-logo" src="#" width="145" height="36" alt="Логотип Device"> 
+
+          <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+            <input class="search-field" type="search" placeholder="Текст поиска">
+            <button class="button-search" type="submit">
+              <span class="search">Найти</span>
+            </button>
+          </form>
+
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Войти</a>
+            </li>  
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Сравнить</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Корзина</a>
+            </li>
+          </ul>
+          <ul class="information-list">
+            <li class="information-item">
+              <a class="information-link" href="#">Каталог товаров</a>
+            </li>
+            <li class="information-item">
+              <a class="information-link" href="#">Доставка</a>
+            </li>
+            <li class="information-item">
+              <a class="information-link" href="#">Гарантия</a>
+            </li>
+            <li class="information-item">
+              <a class="information-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="main-index"> 
+        <h1 class="visually-hidden">Предложения</h1>
+        <section class="gallery">
+          <h2 class="visually-hidden">Фотогалерея</h2>
+          <img class="slider-image" src="#" alt="Фотографии товара" >
+          <button class="slider-button slider-prev" type="button">
+            <span class="visually-hidden">Предыдущее фото</span>
+          </button>
+          <button class="slider-button slider-next" type="button">
+            <span class="visually-hidden">Следующее фото</span>
+          </button>
+        </section>
+        <section class="description-item">
+          <h2 class="description-promo">Порхает как бабочка, жалит как пчела!</h2>
+          <p class="description-property">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+          <h3 class="property-more">Подробнее</h3>
+          <ol class="pagination-for-property">
+            <li class="property-pagination-item">
+              <button class="property-pagination-button property-pagination-button-current" type="button">
+                <span class="visually-hidden">Характеристика 1</span>
+              </button>
+            </li>
+            <li class="property-pagination-item">
+              <button class="property-pagination-button" type="button">
+                <span class="visually-hidden">Характеристика 2</span>
+              </button>
+            </li>
+            <li class="property-pagination-item">
+              <button class="property-pagination-button" type="button">
+                <span class="visually-hidden">Характеристика 3</span>
+              </button>
+            </li>
+          </ol>
+          <dl class="property-current">
+            <dt>Дальность полета</dt>
+            <dd>800 м</dd>
+            <dt>Радиус поражения</dt>
+            <dd>50 м</dd>
+          </dl>
+        </section>
+        <section class="goods">
+          <h2 class="visually-hidden">Список товаров</h2>
+          <ul class="goods-list">
+            <li class="goods-item-list">
+              <a class="goods-item-link" href="#">
+                <img class="" src="#" width="160" height="160" alt="Виртуальная реальность"> 
+                <p class="goods-description">Виртуальная реальность</p>
+              </a>
+            </li>
+            <li class="goods-item-list">
+              <a class="goods-item-link" href="#">
+                <img class="" src="#" width="160" height="160" alt="Моноподы для селфи"> 
+                <p class="goods-description">Моноподы для селфи</p>
+              </a>
+            </li>
+            <li class="goods-item-list">
+              <a class="goods-item-link" href="#">
+                <img class="" src="#" width="160" height="160" alt="Экшн-камеры"> 
+                <p class="goods-description">Экшн-камеры</p>
+              </a>
+            </li>
+            <li class="goods-item-list">
+              <a class="goods-item-link" href="#">
+                <img class="" src="#" width="160" height="160" alt="Фитнес-браслеты"> 
+                <p class="goods-description">Фитнес-браслеты</p>
+              </a>
+            </li>
+            <li class="goods-item-list">
+              <a class="goods-item-link" href="#">
+                <img class="" src="#" width="160" height="160" alt="Умные часы"> 
+                <p class="goods-description">Умные часы</p>
+              </a>
+            </li>
+            <li class="goods-item-list">
+              <a class="goods-item-link" href="#">
+                <img class="" src="#" width="160" height="160" alt="Квадрокоптеры"> 
+                <p class="goods-description">Квадрокоптеры</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+     
 
   </body>
 </html>
