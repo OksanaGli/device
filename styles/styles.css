@@ -27,6 +27,9 @@ html {
 }
 
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
   min-height: 100%;
   font-family: "Rubik", "Arial", sans-serif;
   font-size: 18px; 
@@ -37,12 +40,28 @@ body {
 
 .container {
   width: 1440px;
+  margin: 0 auto;
   background-color: #FFFFFF;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.reset-list {
+  list-style: none;
+}
+
 .main-header {
-  width: 1160px;
   color: #000000;
+  background-color: #FFFFFF;
 }
 
 .navigation-link {
@@ -61,7 +80,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   font-weight: 800;
-  text-align: center;
+  letter-spacing: 3.2px;
   color: #000000;
   background-color: #FFFFFF;
   text-decoration: none;
@@ -83,6 +102,72 @@ body {
   font-weight: 400;
   color: #000000;
   text-align: center;
+  width: 160px;
+}
+
+.navigation-first {
+  display: flex;
+  width: 1160px;
+  margin: 0 140px;
+}
+
+.search-form {
+  display: flex;
+  width: 517px;
+  padding-left: 60px;
+  margin-right: 53px;
+}
+
+.search-field {
+  width: 359px;
+}
+
+.navigation-list {
+  display: flex;
+  width: 557px;
+  margin: 0 auto;
+  padding: 0;
+  padding-right: 60px;
+}
+
+.navigation-item:first-child {
+  margin-right: 198px;
+}
+
+.navigation-item:nth-child(2) {
+  margin-right: 61px;
+}
+
+.navigation-user {
+  margin: 0;
+}
+
+.navigation-catalog:first-child {
+  margin-right: 28px;
+}
+
+.navigation-second {
+  display: flex;
+  width: 1160px;
+  margin: 0 140px;
+}
+
+.information-list {
+  display: flex;
+  width: 1040px;
+  padding: 0 60px;
+}
+
+.information-item:first-child {
+  margin-right: 349px;
+}
+
+.information-item:nth-child(2) {
+  margin-right: 47px;
+}
+
+.information-item:nth-child(3) {
+  margin-right: 50px;
 }
 
 .description-promo,
@@ -130,8 +215,66 @@ body {
   color: #444444;
 }
 
-.goods-item-link {
+.gallery-column {
+  display: flex;
+  justify-content: space-between;
+  width: 1160px;
+  margin: 0 140px;
+}
+
+.gallery {
+  width: 560px;
+}
+
+.description-item {
+  width: 560px;
+}
+
+.description-promo {
+  margin: 0;
+  margin-top: 123px;
+}
+
+.property-more {
+  width: 220px;
+}
+
+.property-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 560px;
+}
+
+.pagination-for-property {
+  display: flex;
+  min-width: 76px;
+  justify-content: space-between;
+}
+
+.property-current {
+  display: grid;
+  grid-template-columns: 140px 147px;
+  column-gap: 20px;
+  padding: 0;
+  padding-right: 253px;
+}
+
+.property-last {
+  display: grid;
+  grid-template-columns: 100px 79px 126px;
+  column-gap: 40px;
+  padding: 0;
+  padding-right: 253px;
+}
+
+/* ------goods------ */
+
+.goods-link {
   text-decoration: none;
+}
+
+.goods-images {
+  background-color: #FFE17F;
 }
 
 .goods-description {
@@ -140,6 +283,14 @@ body {
   line-height: 24px;
   font-weight: 800;
   color: #000000;
+}
+
+.goods-list {
+  display: grid;
+  grid-template-columns: repeat(6, 160px);
+  column-gap: 40px;
+  padding: 0;
+  margin: 0 140px;
 }
 
 .servises-current {
@@ -155,9 +306,64 @@ body {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+  letter-spacing: 3.2px;
   color: #000000;
+  background-color: #F0F0F0;
+  display: block; 
+  width: 910px;
+  padding: 40px 125px;
+  margin: 70px 140px;
 }
 
+.aboutus-information {
+  display: flex;
+  width: 1160px;
+  margin: 0 140px 70px;
+}
+
+.about {
+  width: 520px;
+  margin-right: 108px;
+}
+
+.contacts {
+  width: 532px;
+}
+
+.subscribe {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #F0F0F0;
+}
+
+.subscribe-offer {
+  width: 348px;
+  padding: 64px 0 0 147px;
+  margin: 0;
+  margin-right: 252px;
+  margin-bottom: 144px;
+}
+
+.subscribe-description {
+  width: 560px;
+  margin: 0;
+  margin-bottom: 144px;
+  padding: 74px 133px 0 0;
+}
+
+.subscribe-form {
+  width: 810px;
+  padding-left: 141px;
+  padding-bottom: 56px;
+  margin-right: 188px;
+}
+
+.subscribe-text {
+  width: 160px;
+  margin: 0;
+  padding: 0 141px 69.5px 0;
+}
+  
 .contacts-address-text,
 .contacts-phone {
   font-weight: 400;
@@ -190,6 +396,7 @@ body {
   font-weight: 400;
   color: #444444;
   opacity: 0.5;
+  width: 557px;
 }
 
 .newsletter-button {
@@ -200,22 +407,143 @@ body {
   text-align: center;
   color: #000000;
   text-transform: uppercase;
+  width: 230px;
 }
+
+/* ------catolog ------ */
+
+.inner-header-title {
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 800;
+}
+
+.breadcrambs-link {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #000000;
+}
+
+.catalog-title,
+.result-of-search,
+.show-more-button{
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.show-more-button {
+  text-align: center;
+  letter-spacing: 3.2px;
+  display: block;
+  width: 760px;
+  border: 0;
+  padding: 18px 294.5px;
+}
+
+.select-control {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.range-price,
+.catalog-filter-title,
+.catalog-description { 
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.catalog-price {
+  line-height: 21px;
+  font-weight: 400;
+  color: #444444;
+}
+
+.control-input {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+}
+
+.choice-button {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000000;
+  background-color: #FFE17F;
+}
+
+.pagination-link {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+}
+
+.pagination-number {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  color: #444444;
+  opacity: 30%;
+}
+
+.catalog {
+  display: flex;
+}
+
+.catalog-filter {
+  width: 320px;
+}
+
+.catalog-right-column {
+  width: 840px;
+}
+
+.catalog-list {
+  display: grid;
+  grid-template-columns: repeat(2, 360px);
+  gap: 44px 40px;  
+}
+
+.pagination {
+  display: flex;
+  width: 760px;
+}
+
+/* ------footer ------ */
 
 .page-footer {
   background-color: #444444;
   color: #FFFFFF;
 }
 
-.footer-address-text,
-.footer-contacts-phone {
+.company-address,
+.company-phone {
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   font-style: normal;
 }
 
-.footer-contacts-phone {
+.company-phone {
   color: #FFFFFF;
   text-decoration: underline;
 }
@@ -230,3 +558,4 @@ body {
   text-decoration: none;
   color: #FFFFFF;
 }
+
